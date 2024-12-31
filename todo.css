@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(85deg, #564787ff, #101935ff);
+    padding: 10px;
+}
+.todo-box{
+    width: 100%;
+    max-width: 700px;
+    background: #fffede;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 12px;
+}
+.todo-box h2{
+    color: #002675;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    margin-left: 5px;
+    text-shadow: 2px 2px 4px #ffdbb5;
+}
+.todo-box h2 img{
+    width: 45px;
+    margin-left: 20px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffdbb5;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    border: 2px solid #002675;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 600;
+}
+input::placeholder{
+    color: #002675;
+    font-weight: 600;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 40px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    box-shadow: 0 0 0 1.8px #ff5945;
+    transition: background-color .3s ease;
+}
+button:hover{
+    background: #ff4114;
+}
+.temp-color{
+    background: #ff4114;
+}
+ul li{
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(To-Do-Img/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+}
+ul li.checked{
+    color: #626262;
+    text-decoration: line-through;
+    text-decoration-color: #ff4114;
+}
+ul li.checked::before{
+    background-image: url(To-Do-Img/checked.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background-color: #edeef0;
+}
+.nav-bar{
+    display: flex;
+    position: sticky;
+    height: 80px;
+    margin-bottom: 50px;
+    align-items: center;
+    padding: 10px 15px 0px;
+}
+.nav-bar a{
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+    position: relative;
+}
+.nav-bar a h2 i{
+    transition: color .3s ease;
+}
+.nav-bar a h2 i:hover{
+    color: #ffdbb5;
+}
+/* Code to insert logo at top right of screen */
+/* .nav-bar img{
+    width: 150px;
+    position: absolute;
+    right: 15px;
+} */ 
